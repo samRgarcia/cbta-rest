@@ -48,7 +48,10 @@ const Aspirante = sequelize.define('aspirante', {
         carrerasinteres: {
             type: Sequelize.TEXT
         },
-        periodo_idperiodo: {
+        ciclo: {
+            type: Sequelize.INTEGER
+        },
+        catmodalidad: {
             type: Sequelize.INTEGER
         },
         catestados_nacimiento_id: {

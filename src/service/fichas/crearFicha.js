@@ -1,46 +1,104 @@
 import Aspirante from '../../models/aspirante';
+import DomicilioAspirante from '../../models/domaspirante';
+import EscuelaProcedencia from '../../models/escuelaprocedencia';
+
+import {deleteAspirante} from '../fichas/revertir';
+import Sequelize from "sequelize";
 
 
-export async function guardarFicha(registro){
+export async function guardarFicha(registro) {
     try {
-        //const {infoPersonal,direccion,infperiodo,infProcedencia,infCarrera} = registro;
+        const {infoPersonal, direccion, infperiodo, infProcedencia, infCarrera} = registro;
         //console.log(registro)
-       await crearASpirante(registro);
+        await crearASpirante(infoPersonal, infCarrera, infperiodo);
+        let folio = await buscarCurp(infoPersonal.curp);
+        await crearDireccionAspirante(direccion, folio)
+        await crearEscuelaProcedencia(infProcedencia,folio)
 
-        let dataAspirante = await Aspirante.findAll();
-        console.log(dataAspirante)
-    }catch (e) {
+        //let dataAspirante = await Aspirante.findAll();
+    } catch (e) {
         console.log(e)
         throw new Error(e);
     }
 }
 
- async function crearASpirante(data){
+async function crearASpirante(data, carrera, infperiodo) {
     try {
         await Aspirante.create({
             nombreasp: data.nombre,
             apepat: data.primerApellido,
             apemat: data.segundoApellido,
-            curp: 'xxxxxxxxxx',
-            numseguro: 'aaaaaa',
-            fechana: new Date(),
-            sexo: 'NA',
-            email: 'sam@hotmail.com',
-            escivil: 'Casado',
-            telcasa: 2323223,
-            telcelular: 2323232,
-            localidadna: 'dwdwdd',
-            constanciaes:2,
-            carrerasinteres: "tcis",
-            periodo_idperiodo: 1,
-            catestados_nacimiento_id: 4 ,
-            catmunicipio_nacimiento_id:36,
+            curp: data.curp,
+            numseguro: data.imss,
+            fechana: data.fechaNacimiento,
+            sexo: data.sexo,
+            email: data.correo,
+            escivil: data.estadoCivil,
+            telcasa: data.telefono,
+            telcelular: data.celular,
+            localidadna: data.localidadDeNacimiento,
+            constanciaes: data.constanciaEstudio,
+            carrerasinteres: carrera.carreraInteres,
+            ciclo: infperiodo.ciclo,
+            catmodalidad: infperiodo.modalidad,
+            catestados_nacimiento_id: data.estadoNacimiento,
+            catmunicipio_nacimiento_id: data.municipioNacimiento,
         })
-    }catch (e) {
+    } catch (e) {
         console.log(e)
         throw new Error(e);
     }
 }
+
+async function buscarCurp(curp) {
+    try {
+        let curpData = await Aspirante.findAll({where: {curp: curp}})
+        if (curpData.length) {
+            let [{folio}] = curpData;
+            return folio
+        }
+        return curpData;
+    } catch (e) {
+        console.log(e)
+    }
+}
+
+async function crearDireccionAspirante(data, folio) {
+    try {
+        await DomicilioAspirante.create({
+            cp: data.cp,
+            colonia: data.colonia,
+            calle: data.calleNumero,
+            numero: data.calleNumero,
+            estado: data.estado,
+            municipio: data.municipio,
+            localidad: data.localidad,
+            aspirante_folio: folio
+
+        })
+    } catch (e) {
+        console.log(e)
+        await deleteAspirante(folio)
+        throw  new Error("Error al crear la direccion")
+    }
+}
+
+async function crearEscuelaProcedencia(data,folio) {
+    try {
+        await EscuelaProcedencia.create({
+            nomescuela:'' ,
+            regimenes:data.regimen ,
+            aspirante_folio:folio,
+            catmunicipio_id: data.municipio,
+            catestados_id: data.estado,
+            catmodalidad_id: data.modalidad,
+        })
+    }catch (e) {
+        console.log(e)
+        throw new Error('Error al crear la escuela procedencia')
+    }
+}
+
 /*
 {
   infoPersonal: {
