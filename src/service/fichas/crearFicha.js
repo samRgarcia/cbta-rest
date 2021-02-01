@@ -3,7 +3,6 @@ import DomicilioAspirante from '../../models/domaspirante';
 import EscuelaProcedencia from '../../models/escuelaprocedencia';
 
 import {deleteAspirante} from '../fichas/revertir';
-import Sequelize from "sequelize";
 
 
 export async function guardarFicha(registro) {

@@ -10,7 +10,7 @@ const Usuarios = sequelize.define('usuarios', {
             type: Sequelize.STRING,
         },
         password: {
-            type: Sequelize.STRING,
+            type: Sequelize.TEXT,
         },
         tipousuario: {
             type: Sequelize.STRING,
