@@ -11,16 +11,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8521ced8-b18b-41e6-8905-123918183a68" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/controller/Reportes/get.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/reporte.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/service/reportes/listas.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/Login/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Login/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/usuarios.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/usuarios.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/fichas/crearFicha.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/fichas/crearFicha.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/service/login/crearUsuario.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/login/crearUsuario.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -69,7 +60,11 @@
       <workItem from="1611928296269" duration="13315000" />
       <workItem from="1611963294433" duration="47000" />
       <workItem from="1612028140819" duration="26568000" />
-      <workItem from="1612111735226" duration="14575000" />
+      <workItem from="1612111735226" duration="17077000" />
+      <workItem from="1612191408210" duration="1487000" />
+      <workItem from="1612290155133" duration="1887000" />
+      <workItem from="1612486229981" duration="3006000" />
+      <workItem from="1612547642179" duration="1140000" />
     </task>
     <servers />
   </component>
@@ -93,10 +88,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="350" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1611789462543" />
-    <state x="379" y="275" key="FileChooserDialogImpl" timestamp="1611928367995">
+    <state x="379" y="275" key="FileChooserDialogImpl" timestamp="1612486234684">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="379" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1611928367995" />
+    <state x="379" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1612486234684" />
     <state x="1041" y="241" key="run.anything.popup" timestamp="1612133484619">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

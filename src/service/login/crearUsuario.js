@@ -18,7 +18,7 @@ function comparePassword(password, dbPassword,usuario) {
         .then(sonIguales => {
             if (sonIguales === true) {
                 //TODO: generar token
-                let data = {usuario:usuario}
+                let data = {userId:230}
                 return sing(data)
             } else {
                 throw new Error('Infomacion invalida');
