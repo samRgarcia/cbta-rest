@@ -2,6 +2,7 @@ const bcrypt = require('bcrypt');
 import jwt from 'jsonwebtoken';
 import configs from '../../config/auth';
 import Usuarios from '../../models/usuarios';
+import Personal from "../../models/personal";
 
 const secret = configs.jwt.secret;
 
@@ -28,13 +29,45 @@ function comparePassword(password, dbPassword,usuario) {
 
 export async function guardarUsuario(data) {
     try {
-        const {nomusuario, password,} = data;
+        const {
+            nompersonal,
+            apepat,
+            apemat,
+            rfc,
+            curp,
+            sexo,
+            nombramiento,
+            tipoplaza,
+            clavepres,
+            antiguedad,
+            fechanom,
+            direccion,
+            usuario,
+            password,
+            tipousuario
+        } = data;
         let newPassword = await encode(password)
-        await Usuarios.create({
-            nomusuario: nomusuario,
-            password: newPassword
+        await Personal.create({
+            nompersonal,
+            apepat,
+            apemat,
+            rfc,
+            curp,
+            sexo,
+            nombramiento,
+            tipoplaza,
+            clavepres,
+            antiguedad,
+            fechanom,
+            direccion,
+            usuario,
+            password:newPassword,
+            tipousuario
+
+
         });
     } catch (e) {
+        console.log(e)
         throw new Error('Error al crear el usuario')
     }
 }
@@ -53,7 +86,7 @@ export async function loginUser(password, contraseñaDb,usuario) {
 
 export async function validarUser(usuario) {
     try {
-        const userData = await Usuarios.findOne({where: {nomusuario: usuario}})
+        const userData = await Personal.findOne({where: {usuario: usuario}})
         if (userData) {
             return userData.password
         }

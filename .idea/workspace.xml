@@ -12,7 +12,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8521ced8-b18b-41e6-8905-123918183a68" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/fichas/crearFicha.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/fichas/crearFicha.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/login/crearUsuario.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/login/crearUsuario.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +38,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../controlescolarms" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -65,7 +65,8 @@
       <workItem from="1612290155133" duration="1887000" />
       <workItem from="1612486229981" duration="3006000" />
       <workItem from="1612547642179" duration="16828000" />
-      <workItem from="1612629803362" duration="20124000" />
+      <workItem from="1612629803362" duration="22422000" />
+      <workItem from="1612711343706" duration="1261000" />
     </task>
     <servers />
   </component>
@@ -89,13 +90,24 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="350" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1611789462543" />
-    <state x="379" y="275" key="FileChooserDialogImpl" timestamp="1612486234684">
+    <state x="379" y="275" key="FileChooserDialogImpl" timestamp="1612711356587">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="379" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1612486234684" />
+    <state x="379" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1612711356587" />
     <state x="1041" y="241" key="run.anything.popup" timestamp="1612133484619">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1041" y="241" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1612133484619" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/service/login/crearUsuario.js</url>
+          <line>86</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
