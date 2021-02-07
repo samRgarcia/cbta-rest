@@ -41,7 +41,16 @@ const Personal = sequelize.define('personal', {
         },
         direccion: {
             type: Sequelize.STRING,
-        }
+        },
+        usuario: {
+            type: Sequelize.STRING,
+        },
+        password: {
+            type: Sequelize.STRING,
+        },
+        tipousuario: {
+            type: Sequelize.STRING,
+        },
     },
     {
         freezeTableName: true,

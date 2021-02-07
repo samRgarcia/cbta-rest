@@ -45,19 +45,13 @@ const Aspirante = sequelize.define('aspirante', {
         constanciaes: {
             type: Sequelize.STRING
         },
-        carrerasinteres: {
-            type: Sequelize.TEXT
-        },
-        ciclo: {
-            type: Sequelize.INTEGER
-        },
-        catmodalidad: {
-            type: Sequelize.INTEGER
-        },
-        catestados_nacimiento_id: {
-            type: Sequelize.INTEGER
-        },
         catmunicipio_nacimiento_id: {
+            type: Sequelize.INTEGER
+        },
+        catciclo_id: {
+            type: Sequelize.INTEGER
+        },
+        carreras_idcarreras: {
             type: Sequelize.INTEGER
         }
     },

@@ -1,34 +1,64 @@
-import express,{json} from'express';
-const  morgan = require('morgan');
+import express, {json} from 'express';
+import {constanciasPdf} from './controller/Archivos/pdf';
+const morgan = require('morgan');
+const multer = require('multer');
 const http = require('http');
 const path = require('path');
 const cors = require('cors');
 const rutas = require('./routes/index');
+const uuid = require("uuid");
 
-class Server{
+/*const storege = multer.diskStorage({
+    destination(req,file,cb) {
+        cb(null,'uploads');
+    },
+    filename(req,file,cb){
+        cb(null,path.extname(file.originalname));
+    }
+})*/
+
+class Server {
     constructor() {
-    this.app = express();
-    this.port = process.env.PORT_SERVER;
-    this.server = http.createServer(this.app);
+        this.app = express();
+        this.port = process.env.PORT_SERVER;
+        this.server = http.createServer(this.app);
     }
 
-    middlewares(){
-        this.app.use(express.static(path.resolve(__dirname,'../public')));
+    middlewares() {
+        //this.app.use(express.static(path.resolve(__dirname,'../public')));
         this.app.use(morgan("dev"));
         this.app.use(cors());
         this.app.use(json());
     }
-    initRouter(){
-        this.app.use('/api',rutas);
+
+    initRouter() {
+        this.app.use('/api', rutas);
     }
 
-    execute(){
+    storeges() {
+        this.app.use('/uploads', express.static(path.resolve(__dirname, '../public/constancias')));
+        this.storegex = multer.diskStorage({
+            destination(req, file, cb) {
+                cb(null, path.resolve(__dirname, '../public/constancias'));
+            },
+            filename(req, file, cb) {
+                cb(null, uuid.v4() + path.extname(file.originalname));
+            }
+        });
+
+        this.upload = multer({storage:this.storegex});
+        this.app.post('/constancias', this.upload.single('pdfs'),constanciasPdf)
+    }
+
+    execute() {
         this.middlewares();
+        this.storeges();
         this.initRouter();
-        this.server.listen(this.port,()=>{
-            console.log('Server online',this.port)
+        this.server.listen(this.port, () => {
+            console.log('Server online', this.port)
         })
     }
 
 }
+
 module.exports = Server;

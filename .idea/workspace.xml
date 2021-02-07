@@ -11,8 +11,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8521ced8-b18b-41e6-8905-123918183a68" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/controller/Archivos/pdf.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controller/Constancias/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/carreras.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/cbtas.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/constancias_aspirantes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/modalidad.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/regimen.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/tutor.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/archivos.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/service/fichas/archivos.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/login/crearUsuario.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/login/crearUsuario.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/Fichas/gets.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Fichas/gets.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/Fichas/post.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Fichas/post.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/aspirante.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/aspirante.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/catciclo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/catciclo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/escuelaprocedencia.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/escuelaprocedencia.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/personal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/personal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/fichas.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/fichas.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/fichas/crearFicha.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/fichas/crearFicha.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/fichas/utilidades.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/fichas/utilidades.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +86,8 @@
       <workItem from="1612191408210" duration="1487000" />
       <workItem from="1612290155133" duration="1887000" />
       <workItem from="1612486229981" duration="3006000" />
-      <workItem from="1612547642179" duration="1140000" />
+      <workItem from="1612547642179" duration="16828000" />
+      <workItem from="1612629803362" duration="17027000" />
     </task>
     <servers />
   </component>

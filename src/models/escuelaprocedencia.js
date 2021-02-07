@@ -9,19 +9,16 @@ const Escuelaprocedencia = sequelize.define('escuelaprocedencia', {
         nomescuela: {
             type: Sequelize.STRING,
         },
-        regimenes: {
-            type: Sequelize.STRING,
+        catmunicipio_id: {
+            type: Sequelize.INTEGER,
+        },
+        regimen_idregimen: {
+            type: Sequelize.INTEGER,
         },
         aspirante_folio: {
             type: Sequelize.INTEGER,
         },
-        catmunicipio_id: {
-            type: Sequelize.INTEGER,
-        },
-        catestados_id: {
-            type: Sequelize.INTEGER,
-        },
-        catmodalidad_id: {
+        modalidad_idmodalidad: {
             type: Sequelize.INTEGER,
         }
     },

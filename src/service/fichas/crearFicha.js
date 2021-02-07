@@ -13,7 +13,7 @@ export async function guardarFicha(registro) {
         let folio = await buscarCurp(infoPersonal.curp);
         await crearDireccionAspirante(direccion, folio)
         await crearEscuelaProcedencia(infProcedencia,folio)
-
+        return folio;
         //let dataAspirante = await Aspirante.findAll();
     } catch (e) {
         console.log(e)
@@ -36,11 +36,9 @@ async function crearASpirante(data, carrera, infperiodo) {
             telcasa: data.telefono,
             telcelular: data.celular,
             localidadna: data.localidadDeNacimiento,
-            constanciaes: data.constanciaEstudio,
-            carrerasinteres: carrera.carreraInteres,
-            ciclo: infperiodo.ciclo,
-            catmodalidad: infperiodo.modalidad,
-            catestados_nacimiento_id: data.estadoNacimiento,
+            carreras_idcarreras: carrera.carreraInteres,
+            catciclo_id: infperiodo.ciclo,
+            //catmodalidad: infperiodo.modalidad,
             catmunicipio_nacimiento_id: data.municipioNacimiento,
         })
     } catch (e) {
@@ -86,11 +84,10 @@ async function crearEscuelaProcedencia(data,folio) {
     try {
         await EscuelaProcedencia.create({
             nomescuela:'' ,
-            regimenes:data.regimen ,
+            regimen_idregimen:data.regimen ,
             aspirante_folio:folio,
             catmunicipio_id: data.municipio,
-            catestados_id: data.estado,
-            catmodalidad_id: data.modalidad,
+            modalidad_idmodalidad: data.modalidad,
         })
     }catch (e) {
         console.log(e)

@@ -1,17 +1,15 @@
 import Sequelize from "sequelize";
 import {sequelize} from "../config/database";
 
-const Catciclo = sequelize.define('catciclo', {
-        id: {
+const Cbtas = sequelize.define('cbtas', {
+        idcbtas: {
             type: Sequelize.INTEGER,
             primaryKey: true
         },
-        nomciclo: {
+        nombre: {
             type: Sequelize.STRING,
-        },catmodalidad_id: {
-            type: Sequelize.INTEGER,
-        },cbtas_idcbtas: {
-            type: Sequelize.INTEGER,
+        }, clave: {
+            type: Sequelize.STRING,
         }
     },
     {
@@ -19,4 +17,4 @@ const Catciclo = sequelize.define('catciclo', {
         timestamps: false
     }
 );
-export default Catciclo;
+export default Cbtas;
