@@ -1,18 +1,20 @@
 import Aspirante from '../../models/aspirante';
 import DomicilioAspirante from '../../models/domaspirante';
 import EscuelaProcedencia from '../../models/escuelaprocedencia';
+import Tutor from "../../models/tutor";
 
 import {deleteAspirante} from '../fichas/revertir';
 
 
 export async function guardarFicha(registro) {
     try {
-        const {infoPersonal, direccion, infperiodo, infProcedencia, infCarrera} = registro;
+        const {infoPersonal, direccion, infperiodo, infProcedencia, infCarrera,infTutor} = registro;
         //console.log(registro)
         await crearASpirante(infoPersonal, infCarrera, infperiodo);
         let folio = await buscarCurp(infoPersonal.curp);
-        await crearDireccionAspirante(direccion, folio)
-        await crearEscuelaProcedencia(infProcedencia,folio)
+        await crearDireccionAspirante(direccion, folio);
+        await crearEscuelaProcedencia(infProcedencia,folio);
+        await crearTutor(infTutor,folio)
         return folio;
         //let dataAspirante = await Aspirante.findAll();
     } catch (e) {
@@ -92,6 +94,21 @@ async function crearEscuelaProcedencia(data,folio) {
     }catch (e) {
         console.log(e)
         throw new Error('Error al crear la escuela procedencia')
+    }
+}
+
+async function crearTutor(data,folio) {
+    try {
+        await Tutor.create({
+            nombre:data.nombre ,
+            telefono:data.telefono ,
+            correo:data.correo,
+            direccion: data.direccion,
+            aspirante_folio: folio,
+        })
+    }catch (e) {
+        console.log(e)
+        throw new Error('Error al crear la tutor')
     }
 }
 

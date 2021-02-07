@@ -11,8 +11,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8521ced8-b18b-41e6-8905-123918183a68" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/fichas/crearFicha.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/fichas/crearFicha.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +65,7 @@
       <workItem from="1612290155133" duration="1887000" />
       <workItem from="1612486229981" duration="3006000" />
       <workItem from="1612547642179" duration="16828000" />
-      <workItem from="1612629803362" duration="18258000" />
+      <workItem from="1612629803362" duration="20124000" />
     </task>
     <servers />
   </component>
