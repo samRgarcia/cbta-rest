@@ -11,8 +11,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8521ced8-b18b-41e6-8905-123918183a68" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/controller/Administrador/delete.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controller/Administrador/get.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controller/Administrador/post.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controller/Administrador/put.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/administrador.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/service/Admistrador/listasCatalogos.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/login/crearUsuario.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/login/crearUsuario.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/Fichas/gets.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Fichas/gets.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/fichas.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/fichas.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/fichas/utilidades.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/fichas/utilidades.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +75,7 @@
       <workItem from="1612486229981" duration="3006000" />
       <workItem from="1612547642179" duration="16828000" />
       <workItem from="1612629803362" duration="22422000" />
-      <workItem from="1612711343706" duration="1261000" />
+      <workItem from="1612711343706" duration="12747000" />
     </task>
     <servers />
   </component>
@@ -98,16 +107,5 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1041" y="241" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1612133484619" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/service/login/crearUsuario.js</url>
-          <line>86</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

@@ -4,7 +4,7 @@ import {
     getListasCiclo,
     getListasModalidad,
     getExistenciaCurp,
-    getListasModalidadEscuela, getListasRegimen, getListasCarreraInteres
+    getListasModalidadEscuela, getListasRegimen, getListasCarreraInteres, getComprobante
 } from '../controller/Fichas/gets';
 
 const router = Router();
@@ -13,9 +13,9 @@ router.get('/get/modalidad',getListasModalidad)
 router.get('/get/modalidad/escuela',getListasModalidadEscuela)
 router.get('/get/lista/regimen',getListasRegimen)
 router.get('/get/lista/carrera-interes',getListasCarreraInteres)
-
-
 router.get('/get/ciclo',getListasCiclo)
 router.get('/curp-verificacion',getExistenciaCurp)
+router.get('/comprobante',getComprobante)
+
 
 export default router;

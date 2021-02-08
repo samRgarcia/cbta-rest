@@ -3,7 +3,7 @@ import {
     listaModalidad,
     duplicidadCurp,
     listaModalidadEscuela,
-    listaRegimen, listaCarreraInteres
+    listaRegimen, listaCarreraInteres,listaComprobante
 } from '../../service/fichas/utilidades';
 
 export async function getListasModalidad(req, res) {
@@ -69,6 +69,18 @@ export async function getExistenciaCurp(req, res) {
     try {
         const {curp} = req.query;
         let data = await duplicidadCurp(curp);
+        res.status(200).json(data);
+    } catch (e) {
+        console.log(e)
+        res.status(500).json('error en el server')
+    }
+}
+
+export async function getComprobante(req, res) {
+    try {
+        const {folio} = req.query;
+        console.log(folio)
+        let data = await listaComprobante(folio)
         res.status(200).json(data);
     } catch (e) {
         console.log(e)
