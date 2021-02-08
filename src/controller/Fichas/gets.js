@@ -79,7 +79,6 @@ export async function getExistenciaCurp(req, res) {
 export async function getComprobante(req, res) {
     try {
         const {folio} = req.query;
-        console.log(folio)
         let data = await listaComprobante(folio)
         res.status(200).json(data);
     } catch (e) {

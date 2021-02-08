@@ -40,7 +40,7 @@ async function crearASpirante(data, carrera, infperiodo) {
             localidadna: data.localidadDeNacimiento,
             carreras_idcarreras: carrera.carreraInteres,
             catciclo_id: infperiodo.ciclo,
-            //catmodalidad: infperiodo.modalidad,
+            constanciaes: data.constanciaEstudio,
             catmunicipio_nacimiento_id: data.municipioNacimiento,
         })
     } catch (e) {
