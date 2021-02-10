@@ -3,7 +3,7 @@ import {
     listaModalidad,
     duplicidadCurp,
     listaModalidadEscuela,
-    listaRegimen, listaCarreraInteres,listaComprobante
+    listaRegimen, listaCarreraInteres, listaComprobante, listaComprobanteCurp
 } from '../../service/fichas/utilidades';
 
 export async function getListasModalidad(req, res) {
@@ -80,6 +80,16 @@ export async function getComprobante(req, res) {
     try {
         const {folio} = req.query;
         let data = await listaComprobante(folio)
+        res.status(200).json(data);
+    } catch (e) {
+        console.log(e)
+        res.status(500).json('error en el server')
+    }
+}
+export async function getComprobanteCurp(req, res) {
+    try {
+        const {curp} = req.query;
+        let data = await listaComprobanteCurp(curp)
         res.status(200).json(data);
     } catch (e) {
         console.log(e)
