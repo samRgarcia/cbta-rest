@@ -2,11 +2,13 @@ import express, {json} from 'express';
 import {constanciasPdf} from './controller/Archivos/pdf';
 const morgan = require('morgan');
 const multer = require('multer');
-const http = require('http');
+//const http = require('http');
 const path = require('path');
 const cors = require('cors');
 const rutas = require('./routes/index');
 const uuid = require("uuid");
+const https = require('https');
+const fs = require('fs');
 
 /*const storege = multer.diskStorage({
     destination(req,file,cb) {
@@ -21,8 +23,13 @@ class Server {
     constructor() {
         this.app = express();
         this.port = process.env.PORT_SERVER;
-        this.server = http.createServer(this.app);
+       this.server = https.createServer({
+        key: fs.readFileSync(__dirname + '/ssl/my_cert.key'),
+        cert: fs.readFileSync(__dirname + '/ssl/my_cert.crt')
+       },this.app);
+    
     }
+    
 
     middlewares() {
         //this.app.use(express.static(path.resolve(__dirname,'../public')));
