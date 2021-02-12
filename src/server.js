@@ -9,6 +9,7 @@ const rutas = require('./routes/index');
 const uuid = require("uuid");
 const https = require('https');
 const fs = require('fs');
+const compression = require('compression');
 
 /*const storege = multer.diskStorage({
     destination(req,file,cb) {
@@ -18,6 +19,22 @@ const fs = require('fs');
         cb(null,path.extname(file.originalname));
     }
 })*/
+
+var allowlist = [
+    "https://colebach.com",
+    "https://www.colebach.com"
+  ];
+
+  var corsOptionsDelegate = function (req, callback) {
+  
+    var corsOptions;
+    if (allowlist.indexOf(req.header("Origin")) !== -1) {
+      corsOptions = { origin: true };
+    } else {
+      corsOptions = { origin: false };
+    }
+    callback(null, corsOptions);
+  };
 
 class Server {
     constructor() {
@@ -29,13 +46,17 @@ class Server {
        },this.app);
     
     }
-    
 
+
+    
+    
+    
     middlewares() {
         //this.app.use(express.static(path.resolve(__dirname,'../public')));
         this.app.use(morgan("dev"));
-        this.app.use(cors());
+        this.app.use(cors(corsOptionsDelegate));
         this.app.use(json());
+        this.app.use(compression());
     }
 
     initRouter() {
