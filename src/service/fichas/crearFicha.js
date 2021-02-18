@@ -26,18 +26,18 @@ export async function guardarFicha(registro) {
 async function crearASpirante(data, carrera, infperiodo) {
     try {
         await Aspirante.create({
-            nombreasp: data.nombre,
-            apepat: data.primerApellido,
-            apemat: data.segundoApellido,
-            curp: data.curp,
+            nombreasp: data.nombre.toUpperCase(),
+            apepat: data.primerApellido.toUpperCase(),
+            apemat: data.segundoApellido.toUpperCase(),
+            curp: data.curp.toUpperCase(),
             numseguro: data.imss,
             fechana: data.fechaNacimiento,
             sexo: data.sexo,
-            email: data.correo,
+            email: data.correo.toUpperCase(),
             escivil: data.estadoCivil,
             telcasa: data.telefono,
             telcelular: data.celular,
-            localidadna: data.localidadDeNacimiento,
+            localidadna: data.localidadDeNacimiento.toUpperCase(),
             carreras_idcarreras: carrera.carreraInteres,
             catciclo_id: infperiodo.ciclo,
             constanciaes: data.constanciaEstudio,
@@ -66,12 +66,12 @@ async function crearDireccionAspirante(data, folio) {
     try {
         await DomicilioAspirante.create({
             cp: data.cp,
-            colonia: data.colonia,
-            calle: data.calleNumero,
-            numero: data.calleNumero,
+            colonia: data.colonia.toUpperCase(),
+            calle: data.calleNumero.toUpperCase(),
+            numero: data.calleNumero.toUpperCase(),
             estado: data.estado,
             municipio: data.municipio,
-            localidad: data.localidad,
+            localidad: data.localidad.toUpperCase(),
             aspirante_folio: folio
 
         })
@@ -100,10 +100,10 @@ async function crearEscuelaProcedencia(data,folio) {
 async function crearTutor(data,folio) {
     try {
         await Tutor.create({
-            nombre:data.nombre ,
-            telefono:data.telefono ,
-            correo:data.correo,
-            direccion: data.direccion,
+            nombre:data.nombre.toUpperCase() ,
+            telefono:data.telefono.toUpperCase() ,
+            correo:data.correo.toUpperCase(),
+            direccion: data.direccion.toUpperCase(),
             aspirante_folio: folio,
         })
     }catch (e) {

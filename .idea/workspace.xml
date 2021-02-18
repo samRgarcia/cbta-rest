@@ -12,8 +12,11 @@
   <component name="ChangeListManager">
     <list default="true" id="8521ced8-b18b-41e6-8905-123918183a68" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/database.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/database.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/Administrador/get.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Administrador/get.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/middlewares/auths.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/middlewares/auths.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/administrador.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/administrador.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/Admistrador/listasCatalogos.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/Admistrador/listasCatalogos.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/fichas/crearFicha.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/fichas/crearFicha.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +42,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../controlescolarms" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../react-soket/entrevista/appejercicios" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -75,7 +78,12 @@
       <workItem from="1612888916025" duration="1303000" />
       <workItem from="1612972696540" duration="10377000" />
       <workItem from="1613059182460" duration="12598000" />
-      <workItem from="1613176514000" duration="3837000" />
+      <workItem from="1613176514000" duration="4561000" />
+      <workItem from="1613256022719" duration="74000" />
+      <workItem from="1613256138889" duration="932000" />
+      <workItem from="1613407382191" duration="15000" />
+      <workItem from="1613421436774" duration="926000" />
+      <workItem from="1613491552858" duration="9270000" />
     </task>
     <servers />
   </component>
@@ -99,10 +107,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="350" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1611789462543" />
-    <state x="379" y="275" key="FileChooserDialogImpl" timestamp="1613176522909">
+    <state x="379" y="275" key="FileChooserDialogImpl" timestamp="1613522804446">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="379" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1613176522909" />
+    <state x="379" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1613522804446" />
     <state x="1041" y="241" key="run.anything.popup" timestamp="1612133484619">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

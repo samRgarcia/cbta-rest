@@ -1,5 +1,5 @@
 import {Router} from 'express';
-import {getListCarrera, getListCiclos, getListModalida} from '../controller/Administrador/get';
+import {getDocConstancia, getListCarrera, getListCiclos, getListModalida} from '../controller/Administrador/get';
 import {postCatCarrera, postCatCiclos, postCatModalida} from '../controller/Administrador/post';
 import {putCatCarreras, putCatCiclo, putCatModalidad} from '../controller/Administrador/put';
 import {deleteCarrerasId, deleteCiclosId, deleteModalidadId} from '../controller/Administrador/delete';
@@ -21,6 +21,9 @@ router.get('/carreras',Auth.verifyAdminstrador,getListCarrera);
 router.post('/carreras/add',Auth.verifyAdminstrador,postCatCarrera);
 router.put('/carreras/update',Auth.verifyAdminstrador,putCatCarreras);
 router.delete('/carreras/delete',Auth.verifyAdminstrador,deleteCarrerasId);
+
+router.get('/solicitar/constacia',getDocConstancia);
+
 
 
 

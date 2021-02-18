@@ -1,6 +1,8 @@
 import Catmodalidad from "../../models/catmodalidad";
 import Catciclo from "../../models/catciclo";
 import Carreras from "../../models/carreras";
+import Constancias_aspirantes from "../../models/constancias_aspirantes";
+
 
 export async function listCatModalidad() {
     let data = await Catmodalidad.findAll();
@@ -58,6 +60,7 @@ export async function actualizarCatModalidad(data) {
         }
     })
 }
+
 export async function actualizarCatCarrera(data) {
     await Carreras.update({
         descripcion: data.descripcion
@@ -67,6 +70,7 @@ export async function actualizarCatCarrera(data) {
         }
     })
 }
+
 export async function actualizarCatMCiclo(data) {
     await Catciclo.update({
         nomciclo: data.nomciclo,
@@ -100,4 +104,21 @@ export async function borrarCatCarrerasId(data) {
             idcarreras: data.idcarreras
         }
     })
+}
+
+export async function buscarValidacionFolio({folio}) {
+
+    if (folio) {
+        let file = await Constancias_aspirantes.findOne({
+            where: {
+                aspirante_folio: folio
+            }
+        });
+        if (Boolean(file)) {
+            const {nombre_doc} = file;
+            return nombre_doc;
+        }
+        return false
+    }
+    return false;
 }
